@@ -128,6 +128,7 @@ class UsuariosController extends AppController
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
+
     public function add()
     {
 
@@ -204,6 +205,10 @@ class UsuariosController extends AppController
      */
     public function users()
     {
+         $this->response->header(array(
+            'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Headers' => 'Content-Type'
+        ));
 
         $results=null;
         $connection = ConnectionManager::get('default');
