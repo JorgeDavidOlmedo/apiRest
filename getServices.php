@@ -19,7 +19,7 @@
         return{
             async:function (user,pass) {
                 var authBase=window.btoa(user+":"+pass);
-                return $http.get("http://192.168.14.6/apiRestFul/usuarios/users",{
+                return $http.get("http://xxx.xxx.xxx.xxx/apiRestFul/usuarios/users",{
                     headers:{
                         'Authorization':"Basic "+authBase
                     }
@@ -30,7 +30,7 @@
 	 app.controller('apiRest',function($scope,$http,$sce,$window,$base64,loginService,$rootScope,$timeout){
 	 	$scope.getUsers = function(){
 	 		var user="jorgedavidc99@gmail.com";
-			var pass = "davis"
+			var pass = "xxx"
 	        var usuarios = loginService.async(user,pass);
 	        return usuarios.then(function (response){
 	        	console.log(response);
